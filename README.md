@@ -11,6 +11,10 @@ This section will be regularly updated as I learn and explore new AI concepts.
 - System Prompts and AI Personas
 - LLM Response Structure (choices, usage)
 - Temperature in LLMs
+- Tokens in LLMs
+- JSON (JavaScript Object Notation)
+- Pydantic for Data Validation
+- Structured Data and Schema Validation
 
 ## 🛠️ Technologies
 
