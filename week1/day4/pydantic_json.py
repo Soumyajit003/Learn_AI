@@ -24,6 +24,7 @@ class Ticket(BaseModel):
     issue:str
 
 schema=Ticket.model_json_schema()
+# print(schema)
 
 response_format={
     "type":"json_object"
