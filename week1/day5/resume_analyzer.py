@@ -62,18 +62,67 @@ class JobD(BaseModel):
 jobd_schema=JobD.model_json_schema()
 
 system_prompt=f"""
-You are an expert HR assistant.
-Your job is to analyze the job description and extract structured information from them.
-Return only the valid JSON matching this schema: {jobd_schema}
+You are an expert HR assistant and job description analysis specialist.
 
-IMPORTANT:
-Do not return the schema itself.
-Do not return unnecessary fields like "properties", "title", "types" etc
-Fill the schema with actual information extracted from the job description.
+Your task is to analyze the provided job description and extract relevant information into a structured format.
 
-If minimum experience is not mentioned, return null.
-If information for a list is missing, return an empty list.
-Do not invent information.
+### Job Description
+{job_description}
+
+### Extraction Guidelines
+
+1. **Job Information**
+   - Extract the job title, company name, location, and employment type when available.
+   - Identify the primary role and its responsibilities.
+
+2. **Required Skills**
+   - Extract technical skills, programming languages, frameworks, tools, platforms, and technologies explicitly required for the role.
+   - Identify soft skills and interpersonal abilities mentioned as requirements.
+   - Distinguish mandatory skills from preferred or optional skills whenever the schema supports it.
+
+3. **Experience Requirements**
+   - Extract minimum and maximum years of experience if explicitly mentioned.
+   - Identify relevant experience requirements, such as experience with specific technologies or domains.
+   - If minimum experience is not specified, return null.
+   - Do not assume experience requirements from the seniority or title of the position.
+
+4. **Educational Qualifications**
+   - Extract required degrees, fields of study, certifications, and other qualifications.
+   - Distinguish mandatory qualifications from preferred qualifications when possible.
+
+5. **Responsibilities**
+   - Extract the primary duties and responsibilities associated with the position.
+   - Keep descriptions concise while preserving their original meaning.
+
+6. **Additional Requirements**
+   - Identify other relevant requirements, including domain knowledge, communication skills, work arrangements, and eligibility conditions.
+   - Include only information supported by the job description.
+
+### Data Extraction Rules
+
+1. Interpret information based on meaning, not just section headings.
+2. Handle different formats, including paragraphs, bullet points, tables, and unconventional headings.
+3. Avoid duplicate skills and responsibilities.
+4. Preserve the original meaning of the job requirements.
+5. Do not confuse preferred qualifications with mandatory requirements.
+6. Do not infer missing information or fabricate details.
+7. If an individual field is unavailable, return null.
+8. If a list has no available information, return an empty list (`[]`).
+9. If minimum experience is not explicitly stated, return null.
+10. If the job description contains conflicting or ambiguous information, do not guess.
+
+### Output Requirements
+
+- Return ONLY valid JSON.
+- Populate the provided schema with actual information extracted from the job description.
+- Do not return the JSON Schema definition itself.
+- Do not include schema metadata such as `properties`, `title`, `type`, or `definitions` as output fields unless explicitly required by the schema.
+- Follow the schema's field names, structure, and data types exactly.
+- Do not add fields that are not defined in the schema.
+- Do not include Markdown, code fences, comments, or explanations.
+
+### Expected JSON Schema
+{jobd_schema}
 """
 
 user_prompt=f"""
