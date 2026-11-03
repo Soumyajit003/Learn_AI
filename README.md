@@ -15,6 +15,9 @@ This section will be regularly updated as I learn and explore new AI concepts.
 - JSON (JavaScript Object Notation)
 - Pydantic for Data Validation
 - Structured Data and Schema Validation
+- Prompt engineering fundamentals
+- Components of Prompt Engineering: Role, Task, Constraints, Input Data, Output Format, Fallback Instructions
+- Zero-Shot, One-Shot, and Few-Shot Prompting
 
 ## 🛠️ Technologies
 
