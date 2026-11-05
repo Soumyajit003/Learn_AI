@@ -23,20 +23,11 @@ def get_population(city):
     }
     return populations.get(city, "City not found!!!")
 
-# def calculate(expr):
-#     try:
-#         return eval(expr)
-#     except:
-#         return "calculation error!!!"
-
-import ast
-import operator
-
 def calculate(expr):
     try:
         return eval(expr)
     except:
-        return "calc error!"
+        return "calculation error!!!"
 
 
 # defining the tools
