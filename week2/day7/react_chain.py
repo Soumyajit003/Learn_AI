@@ -255,6 +255,3 @@ prompt="""
 I am soumyajit. I want to find the total population of city hyderabad and kolkata. Help me with this.
 """
 run_agent(prompt)
-
-
-
