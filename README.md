@@ -18,6 +18,10 @@ This section will be regularly updated as I learn and explore new AI concepts.
 - Prompt engineering fundamentals
 - Components of Prompt Engineering: Role, Task, Constraints, Input Data, Output Format, Fallback Instructions
 - Zero-Shot, One-Shot, and Few-Shot Prompting
+- ReAct (Reasoning + Acting)
+- Tool Calling / Function Calling
+- Prompt Chaining
+- Streaming in LLMs
 
 ## 🛠️ Technologies
 
