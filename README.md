@@ -22,6 +22,12 @@ This section will be regularly updated as I learn and explore new AI concepts.
 - Tool Calling / Function Calling
 - Prompt Chaining
 - Streaming in LLMs
+- Introduction to Retrieval-Augmented Generation (RAG)
+- RAG Architecture and Its Workflow
+- Why Do We Need RAG?
+- Understanding Embeddings
+- Vectors and Vector Representations
+- Cosine Similarity
 
 ## 🛠️ Technologies
 
