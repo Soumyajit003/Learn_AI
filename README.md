@@ -28,6 +28,11 @@ This section will be regularly updated as I learn and explore new AI concepts.
 - Understanding Embeddings
 - Vectors and Vector Representations
 - Cosine Similarity
+- Qdrant vectordb
+- Collection, Points, Payloads
+- Storing and Retrieving Embeddings
+- Filter condition
+- Building a RAG System Using Qdrant
 
 ## 🛠️ Technologies
 
